@@ -20,13 +20,14 @@ const Footer = () => {
          </div>
 
          <div className="footer-container-content">
-            <Link className="footer-title" to="/"><h1>Modesto</h1></Link>
-
-            <div className="footer-box-icons">
-               <p className="footer-icon">Face</p>
-               <p className="footer-icon">Twiter</p>
-               <p className="footer-icon">Insta</p>
-               <p className="footer-icon">Linkedin</p>
+            <div className="footer-first-block">
+               <Link to="/"><h1 className="footer-title">Modesto Imobiliária </h1></Link>
+               <div className="footer-box-icons">
+                  <p className="footer-icon">Face</p>
+                  <p className="footer-icon">Twiter</p>
+                  <p className="footer-icon">Insta</p>
+                  <p className="footer-icon">Linkedin</p>
+               </div>
             </div>
 
             <div className="footer-content">
