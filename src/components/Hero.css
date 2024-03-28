@@ -1,0 +1,156 @@
+.hero{
+   position: relative;
+   width: 99vw;
+   height: 99vh;
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+}
+.hero-img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+.banner{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.hero-text {
+   display: flex;
+   flex-direction: column;
+   text-align:center;
+   gap: 2rem;
+   margin: 1rem 0 2.5rem;
+}
+.hero-text-title{
+   font-family: "Nunito Sans", sans-serif;
+   color: #FFF;
+   font-size: 3.4rem;
+}
+.hero-text-text{
+   font-family: "Nunito Sans", sans-serif;
+   color: #FFF;
+   font-size: 1.2rem;
+}
+
+.hero-search-container {
+   width: 80%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr .3fr;
+   align-items: center;
+   background-color: #FFF;
+   padding: 0 1.5rem;
+   margin: 0 2rem;
+   border-radius: 5px;
+   overflow: hidden;
+   margin-top: 2rem;
+}
+.hero-search {
+   display: flex;
+   flex-direction: column;
+   gap: .3rem;
+   border-right: 1px solid #d1d0d0;
+   padding: 1rem;
+   overflow: auto;
+}
+.hero-search input{
+   width: 100%;
+   padding: .5rem .8rem;
+   border: 1px solid #d1d0d0;
+   border-radius: 5px;
+}
+
+.hero-btn-box{
+   display: flex;
+   justify-content: center;
+}
+
+.hero-btn-search {
+   padding: .4rem 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border:none;
+   border-radius: 5px;
+}
+
+.hero__icon {
+   font-size: 1.4rem;
+   color: #FFF;
+}
+
+@media screen and (max-width: 768px){
+   .hero-text{
+      margin: -9rem 0 1.5rem;
+      gap: 1rem;
+   }
+   .hero-text-title{
+      font-size: 2.8rem;
+   }
+   .hero-text-text{
+      font-size: 1rem;
+   }
+   .hero-search-container{
+      margin-top: 1rem;
+      padding: 0 .5rem;
+   }
+   hero-btn-search{
+      padding: .5rem .7rem;
+   }
+   .hero__icon {
+      font-size: 1.2rem;
+   }
+}
+@media screen and (max-width: 576px){
+   .hero{
+      height: 70vh;
+      justify-content: space-evenly;
+   }
+   .hero-text{
+      max-width: 20rem;
+      margin-top: 1rem;
+ 
+   }
+   .hero-text-text{
+      font-size: .9rem;
+      font-weight: 500;
+   }
+
+   .hero-search-container{
+      display: flex;
+      flex-direction: column;
+      overflow: visible;     
+      margin-bottom: 4rem; 
+   }
+   .hero-search {
+      width: 90%;
+      border: none;
+   }
+
+   .hero-search-label {
+      font-size: .9rem;
+   }
+
+   .hero-search input::placeholder {
+      font-size: .8rem;
+   }
+
+   .hero-btn-box{
+      width: 100%;
+      margin: .5rem 0 1.5rem;
+   }
+   .hero-btn-search{
+      width: 83%;
+      padding: .15rem ;
+   }
+   .hero__icon {
+      font-size: 1.4rem;
+   }
+
+}
