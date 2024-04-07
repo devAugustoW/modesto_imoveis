@@ -110,6 +110,7 @@
    text-align: left;
    margin-top: 3rem;
    padding: 0 2rem;
+   color: #fff;
 }
 
 .content-resources{
@@ -126,3 +127,9 @@
 .content-social {
    width: 25%;
 }  
+
+@media screen and (max-width: 768px){
+   .footer-container{
+      display: none;
+   }
+}

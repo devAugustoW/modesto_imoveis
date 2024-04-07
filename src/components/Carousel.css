@@ -47,3 +47,9 @@
 .carousel-swiper img:hover {
    transform: scale(1.05); /* Efeito de escala ao passar o mouse sobre as imagens */
 }
+
+@media screen and (max-width: 768px){
+   .carousel-container{
+      margin-bottom: 4rem;
+   }
+}
