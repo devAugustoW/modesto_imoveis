@@ -1,0 +1,23 @@
+.upload-images{
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   margin-bottom: 3rem;
+}
+
+.upload-images label{
+   font-weight: bold;
+   margin-bottom: .5rem;
+}
+
+.image-input{
+   margin-bottom: 1.5rem;
+}
+
+.capture-button{
+   font-weight: bold;
+   font-size: 1rem;
+   letter-spacing: .5px;
+   padding: 1rem 0;
+   width: 30%;
+}

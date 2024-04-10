@@ -1,0 +1,70 @@
+.form-address{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+   row-gap: 1.2rem;
+   margin-bottom: 1.5rem;
+}
+
+.address-section{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   row-gap: .1rem;
+}
+.address-section label{
+   font-weight: bold;
+   color: #000;
+
+}
+.address-section input{
+   border: 1px solid #cecdcd;
+   border-radius: 4px;
+   height: 2rem;
+   outline: none;
+   padding-left: 1rem;
+   letter-spacing: .5px;
+}
+.address-details{
+   display: flex;
+   column-gap: 1rem;
+}
+.address-cep{
+   width: 30%;
+}
+.address-name{
+   width: 70%;
+}
+.address-logradouro{
+   width: 60%;
+}
+.addres-number{
+   width: 15%;
+}
+.address-complemento{
+   width: 20%;
+}
+.address-neighborhood{
+   width: 30%;
+}
+.address-city{
+   width: 50%;
+}
+.address-uf{
+   width: 15%;
+}
+.address-price{      
+   width: 25%;
+}
+
+@media screen and (max-width: 576px) {
+   .address-details{
+      display: grid;
+      row-gap: 1rem;
+   }
+   .address-section {
+      width: 100%;
+   }
+}

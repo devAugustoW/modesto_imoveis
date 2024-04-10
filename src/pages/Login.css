@@ -3,13 +3,14 @@
    height: 100vh;
    display: grid;
    place-items: center;
-   
-
-   background: linear-gradient(rgb(230, 172, 65), rgb(39, 179, 39));
+   background: #f46b45;    
+   background: -webkit-linear-gradient(to top right, #eea849, #f46b45);     
+   background: linear-gradient(to top left, #eea849, #f46b45);    
 }
 
 .login-container{
-   width: 35rem;
+   width: 90%;
+   max-width: 40rem;
    height: auto;
    display: flex;
    flex-direction: column;
@@ -17,6 +18,7 @@
    padding: 3rem 0;
    border-radius: 10px;
    background-color: #fefefe;
+   margin-top: 4.5rem;
 }
 
 .login-header{
@@ -41,8 +43,12 @@
 .login-form{
    display: flex;
    flex-direction: column;
+   align-items: center;
    row-gap: 1rem;
-   width: 23rem;
+   width: 100%;
+   max-width: 30rem;
+   padding: 0 1rem;
+
 }
 .login-form label{
    display: flex;
@@ -95,4 +101,10 @@
    border: none;
    
    transition: .3s;
+}
+
+@media screen and (max-width: 768px){
+   .login-container{
+      margin-top: -2rem;
+   }
 }

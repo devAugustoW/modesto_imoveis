@@ -16,6 +16,8 @@ title {
   font-family: "Nunito", sans-serif;
 }
 body {
+  width: 100vw;
+  height: 100vh;
   background-color: #eceaea;
 }
 ul {
@@ -38,8 +40,3 @@ button:hover {
   background-color: #F18805;
 }
 
-/*
-button--flex {
-  display: inline-flex;
-}
-*/

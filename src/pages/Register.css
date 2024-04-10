@@ -1,0 +1,55 @@
+.register{
+   width: 100vw;
+   height: auto;
+   display: grid;
+   place-items: center;
+   background: #f46b45;    
+   background: -webkit-linear-gradient(to top right, #eea849, #f46b45);     
+   background: linear-gradient(to top left, #eea849, #f46b45);   
+}
+
+.register-container{
+   width: 90%;
+   height: auto;
+   
+   margin-top: 6.5rem;
+   margin-bottom: 6.5rem;
+   max-width: 60rem;
+   min-width: 20rem;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 3rem 0;
+   border-radius: 10px;
+   background-color: #fff;
+
+}
+.underline-register{
+   width: 8rem;
+   height: .5rem;
+   background: orange;
+   border-radius: 9px;
+}
+
+.register-form{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 0 1rem;
+
+}
+
+.submit-button{
+   padding: 1rem 0;
+   font-size: 1.2rem;
+   font-weight: bold;
+   letter-spacing: .5px;
+}
+
+@media screen and (max-width: 768px) {
+   .register-container{
+      margin-top: 2rem;
+   }
+}
+

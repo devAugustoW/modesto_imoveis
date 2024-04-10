@@ -10,7 +10,7 @@ export const list = [
   {
     id: 1,
     cover: foto1,
-    name: "Tapete vermelho ",
+    name: "Edifício Labareda ",
     location: "Rua das Pernambucanas",
     category: "Aluguel",
     price: "R$ 3.700",
@@ -19,11 +19,11 @@ export const list = [
   {
     id: 2,
     cover: foto2,
-    name: "Proprieade dos Bezeirra",
+    name: "Condomínio Polo Norte",
     location: "Rua Clotilde Moraes",
     category: "A venda",
     price: "R$ 9.750",
-    type: "Condominio",
+    type: "Casa",
   },
   {
     id: 3,
@@ -32,12 +32,12 @@ export const list = [
     location: "Rua Caribe, 54",
     category: "Aluguel",
     price: "R$ 5.860",
-    type: "Oficina",
+    type: "Comercial",
   },
   {
     id: 4,
     cover: foto5,
-    name: "Propriedade dos Monteiro Lobato",
+    name: "Edifício Monteiro Lobato",
     location: "Avenida Liverpool, 2050",
     category: "A venda",
     price: "R$ 7.540",
@@ -46,7 +46,7 @@ export const list = [
   {
     id: 5,
     cover: foto6,
-    name: "Propriedade dos Dantas",
+    name: "Mansão Zurich",
     location: "Rua Marechal Deodoro, 80",
     category: "A vendat",
     price: "R$ 4.850",
@@ -55,12 +55,10 @@ export const list = [
   {
     id: 6,
     cover: foto7,
-    name: "Propriedade dos Zurich",
+    name: "Edfício Costa do Sauípe",
     location: "Rua Vespertino Nogueira, 22",
     category: "A venda",
     price: "R$ 2.742",
     type: "Apartamento",
   },
 ]
- 
- 
