@@ -2,9 +2,7 @@ import "./FormAddress.css";
 import { useState } from 'react';
 
 
-const FormAddress = ({cep, setCep, address, setAddress, neighborhood, setNeighborhood, city, setCity, uf, setUf, price, setPrice}) => {
-
-   const [logradouro, setLogradouro] = useState("");
+const FormAddress = ({cep, setCep, address, setAddress, name, setName, neighborhood, setNeighborhood, city, setCity, uf, setUf, price, setPrice}) => {
 
    const handleCepBlur = async() => {
       try{
@@ -12,25 +10,26 @@ const FormAddress = ({cep, setCep, address, setAddress, neighborhood, setNeighbo
          const data = await response.json();
 
          if (response.ok) {
-            console.log(data.logradouro)   
-            setLogradouro(data.logradouro)
+            console.log(`logradouro vindo de data.logradouro: ${data.logradouro}`);   
+      
+            setAddress(data.logradouro);
+            console.log(`Logradouro vindo de address: ${address}`);
 
          } else {
             throw new Error(`Erro ao buscar CEP: ${data.message}`);
-
          }
       }catch(error){
          console.error(error);
       }
-
    }
-
+   
    return (
       <div className="form-address">
          <div className="address-details">
             <div className="address-section address-cep">
                <label htmlFor="cepInput">CEP</label>
-               <input type="text" id="cepInput"
+               <input type="text" 
+                  id="cepInput"
                   name="cep"
                   value={cep}
                   onChange={(e) => setCep(e.target.value)}
@@ -39,16 +38,21 @@ const FormAddress = ({cep, setCep, address, setAddress, neighborhood, setNeighbo
 
             <div className="address-section address-name">
                <label htmlFor="nameInput">Nome</label>
-               <input type="text" id="nameInput"/>
+               <input type="text" 
+                  id="nameInput"
+                  name="name"
+                  value={name}
+                  />
             </div>
          </div>
 
          <div className="address-details">
             <div className="address-section address-logradouro">
                <label htmlFor="addressInput">Logradouro</label>
-               <input type="text" id="addressInput" 
-                  name="adress"
-                  value={logradouro}/>
+               <input type="text" 
+                  id="addressInput" 
+                  name="address"
+                  defaultValue={address}/>
             </div>
 
 

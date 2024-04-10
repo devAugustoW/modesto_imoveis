@@ -19,7 +19,8 @@ const Register = () => {
 
    const handleSubmitRegisterForm = (e) => {
       e.preventDefault();
-      console.log(cep)
+      console.log("CEP vindo do button:", cep);
+      console.log("Logradouro vindo do button:", address);
       
    }
 
@@ -33,8 +34,12 @@ const Register = () => {
                <div className="underline-register"></div>
             </div>
 
+
+
+
+
             <form className="register-form" onSubmit={handleSubmitRegisterForm}>
-               <FormAddress cep={cep} setCep={setCep}/>
+               <FormAddress cep={cep} setCep={setCep} address={address} setAddress={(setAddress)}/>
                <FormType />
                <FormUpload />         
 
