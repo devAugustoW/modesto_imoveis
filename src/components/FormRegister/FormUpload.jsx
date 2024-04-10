@@ -8,11 +8,7 @@ const FormUpload = () => {
    return (
       <div className="upload-images">
          {/* Inserir Fotos via upload */}
-
-         <label htmlFor="image-input">
-            Upload de Imagens:
-         </label>
-
+         <label htmlFor="image-input">Upload de Imagens: </label>
          <input
             type="file"
             id="image-input"
@@ -39,8 +35,6 @@ const FormUpload = () => {
                />
             ))}
          </div>
-
-
       </div>
    )
 }

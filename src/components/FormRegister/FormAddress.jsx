@@ -10,16 +10,17 @@ const FormAddress = ({cep, setCep, address, setAddress, name, setName, neighborh
          const data = await response.json();
 
          if (response.ok) {
-            console.log(`logradouro vindo de data.logradouro: ${data.logradouro}`);   
-      
             setAddress(data.logradouro);
-            console.log(`Logradouro vindo de address: ${address}`);
-
+            setNeighborhood(data.bairro);
+            setCity(data.localidade);
+            setUf(data.uf)
          } else {
             throw new Error(`Erro ao buscar CEP: ${data.message}`);
+
          }
       }catch(error){
          console.error(error);
+
       }
    }
    
@@ -42,7 +43,7 @@ const FormAddress = ({cep, setCep, address, setAddress, name, setName, neighborh
                   id="nameInput"
                   name="name"
                   value={name}
-                  />
+                  onChange={(e) => setName(e.target.value)}/>
             </div>
          </div>
 
@@ -55,12 +56,10 @@ const FormAddress = ({cep, setCep, address, setAddress, name, setName, neighborh
                   defaultValue={address}/>
             </div>
 
-
             <div className="address-section addres-number">
                <label htmlFor="numberInput">Número</label>
                <input type="text" id="numberInput"/>
             </div>
-
             <div className="address-section address-complemento">
                <label htmlFor="complementoInput">Complemento</label>
                <input type="text" id="complementoInput"/>
@@ -70,24 +69,41 @@ const FormAddress = ({cep, setCep, address, setAddress, name, setName, neighborh
          <div className="address-details">
             <div className="address-section address-neighborhood">
                <label htmlFor="neighborhoodInput">Bairro</label>
-               <input type="text" id="neighborhoodInput"/>
+               <input 
+                  type="text" 
+                  id="neighborhoodInput"
+                  name="neighborhood"
+                  defaultValue={neighborhood}/>
             </div>
 
             <div className="address-section address-city">
                <label htmlFor="cityInput">Cidade</label>
-               <input type="text" id="cityInput"/>
+               <input 
+                  type="text" 
+                  id="cityInput"
+                  name="city"
+                  defaultValue={city}/>
             </div>
 
             <div className="address-section address-uf">
                <label htmlFor="ufInput">UF</label>
-               <input type="text" id="ufInput"/>
+               <input 
+                  type="text" 
+                  id="ufInput"
+                  name="uf"
+                  defaultValue={uf}/>
             </div>
          </div>
 
          {/* Indesrir preço */}
          <div className="address-section address-price">
             <label htmlFor="priceInput">Preço</label>
-            <input type="text" id="precoInput"/>
+            <input 
+               type="text" 
+               id="precoInput"
+               name="price"
+               value={price}
+               onChange={(e) => setPrice(e.target.value)}/>
          </div>
       </div>
    )
