@@ -7,19 +7,20 @@ import FormUpload from "../components/FormRegister/FormUpload";
 
 const Register = () => {
    const [cep, setCep] = useState("");
-
-   const [name, setName] = useState("");
    const [address, setAddress] = useState("");
+
+   const [name, setName] = useState("");   
    const [neighborhood, setNeighborhood] = useState("");
    const [city, setCity] = useState("");
    const [uf, setUf] = useState("");
    const [price, setPrice] = useState("");
 
 
-   
+
    const handleSubmitRegisterForm = (e) => {
       e.preventDefault();
       console.log(cep)
+      
    }
 
 

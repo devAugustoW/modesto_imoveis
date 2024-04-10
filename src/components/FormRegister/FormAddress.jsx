@@ -1,16 +1,32 @@
 import "./FormAddress.css";
-import { useStae } from 'react';
+import { useState } from 'react';
 
 
 const FormAddress = ({cep, setCep, address, setAddress, neighborhood, setNeighborhood, city, setCity, uf, setUf, price, setPrice}) => {
 
+   const [logradouro, setLogradouro] = useState("");
+
    const handleCepBlur = async() => {
-      console.log(`Cep em onBlur ${cep}`);
+      try{
+         const response = await fetch(`https://viacep.com.br/ws/${cep}/json`);
+         const data = await response.json();
+
+         if (response.ok) {
+            console.log(data.logradouro)   
+            setLogradouro(data.logradouro)
+
+         } else {
+            throw new Error(`Erro ao buscar CEP: ${data.message}`);
+
+         }
+      }catch(error){
+         console.error(error);
+      }
+
    }
 
    return (
       <div className="form-address">
-         {/* Inserir endereço */}
          <div className="address-details">
             <div className="address-section address-cep">
                <label htmlFor="cepInput">CEP</label>
@@ -30,7 +46,9 @@ const FormAddress = ({cep, setCep, address, setAddress, neighborhood, setNeighbo
          <div className="address-details">
             <div className="address-section address-logradouro">
                <label htmlFor="addressInput">Logradouro</label>
-               <input type="text" id="addressInput" />
+               <input type="text" id="addressInput" 
+                  name="adress"
+                  value={logradouro}/>
             </div>
 
 
