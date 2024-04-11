@@ -12,7 +12,12 @@
 
 .image-input{
    margin-bottom: 1.5rem;
+}
 
+.camera-controls {
+   display: flex;
+   column-gap: 2rem;
+   margin-bottom: 1rem; /* Espaço entre os botões e os outros elementos */
 }
 
 .capture-button{
@@ -22,3 +27,10 @@
    padding: 1rem 0;
    width: 30%;
 }
+
+
+.camera-video {
+   max-width: 100%; 
+   height: auto; 
+   border: 1px solid #ccc; 
+ }

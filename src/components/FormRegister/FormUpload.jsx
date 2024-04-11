@@ -86,14 +86,14 @@ const FormUpload = () => {
             
          {/* Botão para Capturar Foto da Câmera (dispositivos móveis) */}
          {navigator.mediaDevices && navigator.mediaDevices.getUserMedia && (
-            <div>
-               <button type="button" className="capture-button" onClick={getStream}>
-                  Iniciar Câmera
-               </button>
-               <button type="button" className="capture-button" onClick={takePhoto}>
-                  Capturar Foto
-               </button>
-            </div>
+            <div className="camera-controls">
+            <button type="button" className="capture-button" onClick={getStream}>
+              Iniciar Câmera
+            </button>
+            <button type="button" className="capture-button" onClick={takePhoto}>
+              Capturar Foto
+            </button>
+          </div>
          )}
 
          {/* Exibir Imagens Selecionadas */}
