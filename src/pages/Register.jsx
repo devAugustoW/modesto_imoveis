@@ -1,5 +1,6 @@
 import "./Register.css";
 import { useState } from "react";
+import { addPropertyToList  } from "../Data.js";
 
 import FormAddress from "../components/FormRegister/FormAddress";
 import FormType from "../components/FormRegister/FormType";
@@ -20,8 +21,11 @@ const Register = () => {
 
    const handleSubmitRegisterForm = (e) => {
       e.preventDefault();
+
       const propertyData  = 
       {
+         id: Math.floor(Math.random() * 1000), 
+         cover: "",
          name: name,
          location: address,
          category: categoryType,
@@ -31,6 +35,9 @@ const Register = () => {
 
       console.log("Dados do imóvel cadastrado:", propertyData );
 
+      addPropertyToList(propertyData);
+      
+      
       setCep("");
       setAddress("");
       setName("");
@@ -52,9 +59,17 @@ const Register = () => {
             </div>
 
             <form className="register-form" onSubmit={handleSubmitRegisterForm}>
-               <FormAddress cep={cep} setCep={setCep} address={address} setAddress={(setAddress)} name={name} setName={setName} neighborhood={neighborhood} setNeighborhood={setNeighborhood} city={city} setCity={setCity} uf={uf} setUf={setUf} price={price} setPrice={setPrice}/>
+               <FormAddress 
+                  cep={cep} setCep={setCep} 
+                  address={address} setAddress={(setAddress)} 
+                  name={name} setName={setName} 
+                  neighborhood={neighborhood} setNeighborhood={setNeighborhood} 
+                  city={city} setCity={setCity} 
+                  uf={uf} setUf={setUf} 
+                  price={price} setPrice={setPrice}/>
 
-               <FormType propertyType={propertyType} setPropertyType={setPropertyType} categoryType={categoryType} setCategoryType={setCategoryType}/>
+               <FormType 
+                  propertyType={propertyType} setPropertyType={setPropertyType} categoryType={categoryType} setCategoryType={setCategoryType}/>
                <FormUpload />         
 
                {/* Botão de Envio */}

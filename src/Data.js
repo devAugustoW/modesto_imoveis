@@ -6,7 +6,7 @@ import foto6 from "./assets/list/p-6.png";
 import foto7 from "./assets/list/p-7.png";
 
 
-export const list = [
+let list = [
   {
     id: 1,
     cover: foto1,
@@ -61,4 +61,13 @@ export const list = [
     price: "R$ 2.742",
     type: "Apartamento",
   },
-]
+];
+
+const addPropertyToList = (propertyData) => {
+  const updatedList = [...list, propertyData];
+  list = updatedList;
+
+  console.log(list);
+};
+
+export { list, addPropertyToList };
