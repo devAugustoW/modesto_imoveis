@@ -33,7 +33,7 @@ const Navbar = () => {
 
                   <li className="nav__item">
                      <Link className="nav__link" to="/register">
-                     <i className="uil uil-user nav__icon"></i>
+                     <i className="uil uil-file-alt nav__icon nav__reg"></i>
                      <span className="nav__text">Cadastrar</span>
                      </Link>
                   </li>

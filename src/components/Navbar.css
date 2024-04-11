@@ -95,6 +95,9 @@
       font-size: 1.2rem;
       text-align: center;
    }
+   .nav__reg{
+      font-size: 1.4rem;
+   }
 
    .nav__close {
       position: absolute;
